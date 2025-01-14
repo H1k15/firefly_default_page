@@ -1,0 +1,169 @@
+body {
+    background-image: url('img/1353722.jpeg');
+    background-size: cover;
+    background-position: center;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    font-family: Arial, sans-serif;
+}
+
+.logo {
+    width: 280px;
+    position: absolute;
+    /* Định vị logo */
+    top: 0;
+    /* Căn sát mép trên */
+    left: 0;
+    /* Căn sát mép trái */
+    margin: 0;
+    /* Loại bỏ khoảng cách mặc định */
+    padding: 10px;
+    /* Thêm khoảng đệm (nếu cần) */
+    z-index: 10;
+    /* Đảm bảo logo hiển thị trên các thành phần khác */
+}
+
+.search-bar {
+    border: none;
+    align-items: center;
+    display: flex;
+    margin-top: 200px;
+    width: 500px;
+    height: 45px;
+    position: relative;
+}
+
+.search-bar input {
+    flex: 1;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 40px;
+}
+
+.search-bar button {
+    margin-top: 5px;
+    height: 33px;
+    width: 40px;
+    position: absolute;
+    background: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    top: 0;
+    border: none;
+}
+
+.search-bar button img {
+    width: 43px;
+    /* Thay đổi kích thước ảnh để phù hợp với button */
+    height: 43px;
+    /* Thay đổi kích thước ảnh để phù hợp với button */
+}
+
+
+/* Căn chỉnh các nút vào góc phải */
+
+.search-bar button:first-child {
+    right: 65px;
+    /* Nút microphone */
+}
+
+.search-bar button:last-child {
+    right: 15px;
+    /* Nút camera */
+}
+
+
+/* Cập nhật vị trí cho các icon tìm kiếm */
+
+.search-bar button:nth-child(2) {
+    right: 65px;
+    /* Nút mic ở góc phải */
+}
+
+.search-bar button:nth-child(3) {
+    right: 15px;
+    /* Nút camera ở góc phải */
+}
+
+
+/* Các icon mạng xã hội */
+
+.social-icons {
+    margin-top: 20px;
+    display: flex;
+    gap: 40px;
+    justify-content: center;
+    /* Căn giữa theo chiều ngang */
+    align-items: center;
+    /* Căn giữa theo chiều dọc */
+}
+
+.social-icon {
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    overflow: hidden;
+    transition: background-color 0.3s, color 0.3s;
+    text-decoration: none;
+    background-color: rgba(61, 255, 87, 0.397);
+}
+
+.icon-img {
+    max-width: 35px;
+    max-height: 35px;
+    object-fit: contain;
+}
+
+
+/* Hiệu ứng hover */
+
+.social-icon:hover {
+    background-color: rgba(82, 81, 81, 0.388);
+}
+
+.social-icon:hover .icon-img {
+    opacity: 0.8;
+}
+
+#suggestion-box {
+    display: none;
+    /* Ẩn mặc định */
+    position: absolute;
+    top: 100%;
+    /* Hiển thị ngay dưới ô nhập */
+    left: 0;
+    right: 0;
+    background: white;
+    border: 1px solid #ccc;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    max-height: 200px;
+    /* Giới hạn chiều cao */
+    overflow-y: auto;
+    /* Cuộn nếu danh sách quá dài */
+    z-index: 1000;
+    border-radius: 0 0 5px 5px;
+    /* Góc bo cho phần gợi ý */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.suggestion-item {
+    padding: 10px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.suggestion-item:hover {
+    background-color: #f0f0f0;
+    /* Màu nền khi hover */
+}

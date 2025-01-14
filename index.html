@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Custom New Tab</title>
+    <!-- Liên kết với Font Awesome để sử dụng biểu tượng mạng xã hội -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <!-- Liên kết với file CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container">
+        <img src="img\LogoHSR.png" alt="Google Logo" class="logo">
+        <!--Tìm trên Google hoặc nhập một URL*-->
+        <div class="search-bar">
+            <input type="text" id="searchInput" placeholder="Tìm trên Google hoặc nhập một URL">
+            <button class="search-icon" onclick="searchVoice()">
+                <img src="img\icons8-micro-100.png" alt="Microphone" class="icon-img1">
+            </button>
+            <button class="search-icon" onclick="searchImage()">
+                <img src="img\icons8-camera-100.png" alt="Camera" class="icon-img1">
+            </button>
+        </div>
+        <ul id="suggestion-box" class="suggestion-box"></ul>
+
+        <!-- Thêm các icon dẫn tới mạng xã hội -->
+        <div class="social-icons">
+            <a href="https://www.facebook.com" target="_blank" class="social-icon facebook">
+                <img src="img/icons8-facebook-48.png" alt="Facebook Logo" class="icon-img">
+            </a>
+            <a href="https://www.youtube.com" target="_blank" class="social-icon youtube">
+                <img src="img/icons8-youtube-48.png" alt="YouTube Logo" class="icon-img">
+            </a>
+            <a href="https://www.tiktok.com" target="_blank" class="social-icon tiktok">
+                <img src="img/icons8-tiktok-48.png" alt="TikTok Logo" class="icon-img">
+            </a>
+        </div>
+    </div>
+
+    <!-- Liên kết với file JavaScript -->
+    <script src="script.js"></script>
+</body>
+
+</html>
